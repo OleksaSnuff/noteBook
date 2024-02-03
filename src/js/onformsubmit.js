@@ -1,3 +1,5 @@
+import { refs } from "./refs";
+import { createNoteMarkup } from "./createNoteMarkup";
 export function onFormSubmit(event) {
     event.preventDefault();
     const newNote = {}
@@ -6,4 +8,7 @@ export function onFormSubmit(event) {
         
     })
     console.log(newNote)
+
+    const markup = createNoteMarkup(newNote);
+    refs.taskList.insertAdjacentHTML('beforeend', markup);
 }
