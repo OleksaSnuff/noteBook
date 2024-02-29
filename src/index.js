@@ -17,7 +17,9 @@
 
 
 import { refs } from "./js/refs";
-import { onFormSubmit } from "./js/onformsubmit";
+import { onFormSubmit } from "./js/onFormSubmit";
+import { renderNotes } from "./js/renderNotes";
 
-refs.form.addEventListener('submit', onFormSubmit )
+renderNotes();
+refs.form.addEventListener('submit', onFormSubmit);
 
