@@ -1,3 +1,4 @@
+
 import { refs } from "./refs";
 import { createNoteMarkup } from "./createNoteMarkup";
 import { localStorageApi } from "./localStorageApi";
@@ -15,4 +16,3 @@ export function onFormSubmit(event) {
     localStorageApi.addNote(newNote);
     const markup = createNoteMarkup(newNote);
     refs.taskList.insertAdjacentHTML('beforeend', markup);
-}
